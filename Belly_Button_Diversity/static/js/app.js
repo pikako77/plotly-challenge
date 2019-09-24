@@ -13,7 +13,7 @@ function buildMetadata(sample) {
     // Hint: Inside the loop, you will need to use d3 to append new
     // tags for each key-value in the metadata.
     Object.entries(data).forEach(([key, value]) => {
-      selector.append("h6").text(`${key}: ${value}`);
+      selector.append("h5").text(`${key}: ${value}`);
     });
 
     // BONUS: Build the Gauge Chart
@@ -53,11 +53,26 @@ function buildCharts(sample) {
           colorscale: "Earth"
         } ,
 
-        font: {
-          family: 'Arial',
-          size: 20}
+
       }
     ];
+
+    var bubbleLayout=[
+      {
+        font: {
+          family: 'Arial',
+          size: 20
+        },
+        tickwidth:20,
+  
+        tickfont: {
+          family: 'Arial',
+          size :15
+        }
+        
+      }
+    ];
+
     Plotly.plot("bubble", bubbleData, bubbleLayout);
 
     // @TODO: Build a Bubble Chart using the sample data
@@ -79,7 +94,7 @@ function buildCharts(sample) {
       margin: { t: 0, l: 0 },
       font: {
         family: 'Arial',
-        size: 200
+        size: 16
       },
     };
 
@@ -105,7 +120,7 @@ function init() {
     const firstSample = sampleNames[0];
     buildCharts(firstSample);
     buildMetadata(firstSample);
-    buildGauge("");
+    buildGauge(firstSample);
   });
 }
 
