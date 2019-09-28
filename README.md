@@ -1,7 +1,16 @@
 # plotly-challenge
 ### Dashboard for belly button
 
-#### Aim:
-Build a flak application to study the belly botton biodiverity
+#### Aim
+Build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
+<br>Plots are generated using [Plotly](https://plot.ly/javascript/)
 
-####
+
+#### Heroku
+The app is deployed on Heroku at: [Heroku](https://plot.ly/javascript/)
+
+
+#### Dashboard
+Example of dashboard for sample #940. 
+
+![Dashboard](image/dashboard.PNG)
