@@ -1,3 +1,5 @@
+
+//
 // function buildGauge(wfreq){
 //     //D3.json(`/samples/${sample}`).then((data) => {
 //     // var selector = d3.select("#gauge");
@@ -84,14 +86,20 @@ function buildGauge(wfreq) {
   // Calculate angle to point
   let nstep = 9;
   let FULL_CIRCLE =100;
-  // var degrees = 180 - (wfreq * (180 / (nstep )));
-  var radius = 0.6;
-  var radians =  Math.PI -(wfreq  * Math.PI / (nstep));//degrees * Math.PI / 180;
-  var x = radius * Math.cos(radians);
+  var degrees = 180 - (wfreq * (180 / (nstep )));
+  var radius = 0.5;
+
+  var radians =degrees * Math.PI / 180;
+  var x = radius* Math.cos(radians);
   var y = radius * Math.sin(radians);
 
+  if (wfreq == null ){
+    x = - (radius-0.1) ;
+    y = 0;
+  }
+
   // Path: may have to change to create a better triangle
-  var mainPath = 'M -.0 -0.05 L .0 0.05 L ', // bottom of the needle is defined by a line between A=[0,0.05] and B = [0,-0.05]
+  var mainPath = 'M 0.0 -0.05  L 0.0 0.05  L ', // bottom of the needle is defined by a line between A=[0,0.05] and B = [0,-0.05]
     pathX = String(x),
     space = ' ',
     pathY = String(y),
@@ -156,10 +164,6 @@ function buildGauge(wfreq) {
 
     title: {
       text: '<b>Belly Button Wash Frequency</b><br>Scrubs per week',
-      // font: {
-      //   family: 'Arial',
-      //   size: 12
-      // },
     },
 
     xaxis: {
@@ -175,3 +179,5 @@ function buildGauge(wfreq) {
 
 
 }
+
+
