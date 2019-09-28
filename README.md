@@ -1,2 +1,7 @@
 # plotly-challenge
-HW 13 - dashboard for belly button
+### Dashboard for belly button
+
+#### Aim:
+Build a flak application to study the belly botton biodiverity
+
+####
