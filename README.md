@@ -7,7 +7,7 @@ Build an interactive dashboard to explore the [Belly Button Biodiversity DataSet
 
 
 #### Heroku
-The app is deployed on Heroku at: [Heroku](https://plot.ly/javascript/)
+The app is deployed on Heroku at: [https://mitsu-belly-button.herokuapp.com/](https://mitsu-belly-button.herokuapp.com/)
 
 
 #### Dashboard
